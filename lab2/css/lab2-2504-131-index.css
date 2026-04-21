@@ -1,0 +1,190 @@
+/* 全局重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "微软雅黑", sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* 顶部导航栏 */
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #2c3e50;
+    color: white;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.nav {
+    float: right;
+    height: 60px;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* 主体容器 */
+.container {
+    width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* 左栏：图书分类 */
+.left {
+    float: left;
+    width: 150px;
+    background-color: #fff;
+    padding: 15px 0;
+}
+
+.left h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 15px;
+}
+
+.left ul {
+    list-style: none;
+}
+
+.left ul li {
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.left ul li:hover {
+    background-color: #f0f0f0;
+}
+
+/* 中间栏 */
+.center {
+    float: left;
+    width: 800px;
+    margin: 0 10px;
+}
+
+.section {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.section h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    border-left: 3px solid #e74c3c;
+    padding-left: 8px;
+    font-size: 15px;
+}
+
+/* 图书横排核心 */
+.book {
+    float: left;
+    width: 180px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.book img {
+    width: 150px;
+    height: 200px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border: 1px solid #eee;
+}
+
+.book p {
+    font-size: 13px;
+    color: #333;
+}
+
+/* 清除浮动 */
+.clear {
+    clear: both;
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* 右栏：促销广告 */
+.right {
+    float: left;
+    width: 220px;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.right h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 15px;
+}
+
+.right img {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.right p {
+    color: #e74c3c;
+    font-size: 13px;
+}
+
+/* 页脚 */
+.footer {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+    font-size: 13px;
+}
