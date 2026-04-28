@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>数字展销平台首页</title>
+   
+    <link rel="stylesheet" href="css/lab3-2504-131-index.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">图书展销平台</div>
+        <nav class="nav">
+            <a href="#">首页</a>
+            <a href="#">图书分类</a>
+            <a href="#">热门推荐</a>
+            <a href="#">新书上市</a>
+            
+            <a href="javascript:;" id="loginBtn">登录/注册</a>
+        </nav>
+    </header>
+
+    
+    <div class="container">
+        
+        <aside class="left-sidebar">
+            <h3>图书分类</h3>
+            <ul>
+                <li>文学小说</li>
+                <li>科技计算机</li>
+                <li>经管励志</li>
+                <li>少儿读物</li>
+                <li>人文社科</li>
+            </ul>
+        </aside>
+
+       
+        <main class="main-content">
+           
+            <section class="hot-recommend">
+                <h2>热门推荐</h2>
+                <div class="book-list">
+                    <div class="book-item">
+                        <img src="img/1.jpg" alt="图书">
+                        <p>老人与海</p>
+                    </div>
+                    <div class="book-item">
+                        <img src="img/2.jpg" alt="图书">
+                        <p>傲慢与偏见</p>
+                    </div>
+                    <div class="book-item">
+                        <img src="img/3.jpg" alt="图书">
+                        <p>朝花夕拾</p>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="new-books">
+                <h2>新书上市</h2>
+                <table>
+                    <tr>
+                        <th>书名</th>
+                        <th>作者</th>
+                        <th>价格</th>
+                    </tr>
+                    <tr>
+                        <td>平凡的世界</td>
+                        <td>路遥</td>
+                        <td>¥58.5</td>
+                    </tr>
+                    <tr>
+                        <td>月亮与六便士</td>
+                        <td>毛姆</td>
+                        <td>¥25</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+
+       
+        <aside class="right-sidebar">
+            <h3>促销活动</h3>
+            <p>全场满100减20</p>
+            <p>新书8折特惠</p>
+        </aside>
+    </div>
+
+    
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            
+            <div class="login-form" id="loginForm">
+                <h2>登录</h2>
+                <input type="text" id="loginUser" placeholder="用户名">
+                <input type="password" id="loginPwd" placeholder="密码">
+                <button onclick="login()">登录</button>
+                <p>没有账号？<a href="javascript:;" onclick="showRegister()">立即注册</a></p>
+            </div>
+
+            
+            <div class="register-form" id="registerForm">
+                <h2>注册</h2>
+                <input type="text" id="regUser" placeholder="用户名">
+                <input type="password" id="regPwd" placeholder="密码">
+                <button onclick="register()">注册</button>
+                <p>已有账号？<a href="javascript:;" onclick="showLogin()">立即登录</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        const modal = document.getElementById('loginModal');
+        document.getElementById('loginBtn').onclick = function() {
+            modal.style.display = "block";
+        }
+        window.onclick = function(e) {
+            if (e.target === modal) modal.style.display = "none";
+        }
+
+        
+        function showRegister() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registerForm').style.display = 'block';
+        }
+        function showLogin() {
+            document.getElementById('registerForm').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'block';
+        }
+
+        
+        function register() {
+            const username = document.getElementById('regUser').value;
+            const password = document.getElementById('regPwd').value;
+            if (!username || !password) {
+                alert("用户名和密码不能为空！");
+                return;
+            }
+            
+            localStorage.setItem("userName", username);
+            localStorage.setItem("userPwd", password);
+            alert("注册成功！请登录");
+            showLogin();
+        }
+
+        
+        function login() {
+            const username = document.getElementById('loginUser').value;
+            const password = document.getElementById('loginPwd').value;
+            const savedUser = localStorage.getItem("userName");
+            const savedPwd = localStorage.getItem("userPwd");
+
+            if (username === savedUser && password === savedPwd) {
+                alert("登录成功！");
+                modal.style.display = "none";
+            } else {
+                alert("用户名或密码错误！");
+            }
+        }
+    </script>
+</body>
+</html>
