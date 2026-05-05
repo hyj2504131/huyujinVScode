@@ -8,7 +8,7 @@ body {
     background-color: #f5f5f5;
 }
 
-/* 头部导航 */
+
 .header {
     width: 100%;
     height: 60px;
@@ -36,7 +36,7 @@ body {
     margin: 0 10px;
 }
 
-/* 图标悬停旋转 */
+
 .icon {
     display: inline-block;
     transition: transform 0.3s ease;
@@ -45,7 +45,7 @@ body {
     transform: rotate(15deg);
 }
 
-/* 主体三栏布局 */
+
 .container {
     width: 1200px;
     margin: 80px auto 0;
@@ -78,7 +78,7 @@ body {
     padding: 20px;
 }
 
-/* 多张轮播：从下向上循环切换 */
+
 .carousel {
     width: 100%;
     height: 200px;
@@ -86,7 +86,7 @@ body {
     border-radius: 8px;
     margin-bottom: 30px;
     position: relative;
-    background-color: #f0f8ff; /* 背景色盖住透明图 */
+    background-color: #f0f8ff; 
 }
 .carousel-wrap {
     position: absolute;
@@ -128,7 +128,7 @@ body {
     }
 }
 
-/* 热门推荐图书悬停效果 */
+
 .hot-recommend {
     margin-bottom: 30px;
 }
@@ -158,7 +158,7 @@ body {
     margin: 0 auto 10px;
 }
 
-/* 新书上市表格 */
+
 .new-books h2 {
     margin-bottom: 15px;
 }
@@ -175,7 +175,7 @@ body {
     background-color: #f5f5f5;
 }
 
-/* 右侧栏 */
+
 .right-sidebar {
     width: 200px;
     float: left;
@@ -190,7 +190,7 @@ body {
     margin: 8px 0;
 }
 
-/* 登录弹窗 */
+
 .modal {
     display: none;
     position: fixed;
